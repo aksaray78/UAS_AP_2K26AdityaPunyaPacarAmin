@@ -10,7 +10,7 @@ struct Barang {
     int harga;
 };
 
-// Fungsi untuk menambah barang
+// untuk menambah barang
 void tambahBarang(vector<Barang>& daftarBarang) {
     system("cls");
     int jumlahBarang;
@@ -43,7 +43,7 @@ void tambahBarang(vector<Barang>& daftarBarang) {
     }
 }
 
-// Fungsi untuk menampilkan daftar barang
+// untuk menampilkan daftar barang
 void tampilkanBarang(const vector<Barang>& daftarBarang) {
     system("cls");
     if (daftarBarang.empty()) {
@@ -61,7 +61,7 @@ void tampilkanBarang(const vector<Barang>& daftarBarang) {
     system("pause");
 }
 
-// Fungsi untuk mencari barang termahal
+// untuk mencari barang termahal
 void cariBarangTermahal(const vector<Barang>& daftarBarang) {
     system("cls");
     if (daftarBarang.empty()) {
@@ -82,7 +82,7 @@ void cariBarangTermahal(const vector<Barang>& daftarBarang) {
     system("pause");
 }
 
-// Fungsi untuk menghitung total nilai inventaris
+// Funtuk menghitung total nilai inventaris
 void hitungTotalNilaiInventaris(const vector<Barang>& daftarBarang) {
     system("cls");
     if (daftarBarang.empty()) {
@@ -105,7 +105,7 @@ void hitungTotalNilaiInventaris(const vector<Barang>& daftarBarang) {
     system("pause");
 }
 
-// Fungsi untuk mengecek barang yang perlu restock
+// untuk mengecek barang yang perlu restock
 void cekRestock(const vector<Barang>& daftarBarang) {
     system("cls");
     if (daftarBarang.empty()) {
@@ -125,7 +125,7 @@ void cekRestock(const vector<Barang>& daftarBarang) {
     system("pause");
 }
 
-// Fungsi untuk mengupdate stok barang
+// untuk mengupdate stok barang
 void updateStock(vector<Barang>& daftarBarang) {
     system("cls");
     if (daftarBarang.empty()) {
