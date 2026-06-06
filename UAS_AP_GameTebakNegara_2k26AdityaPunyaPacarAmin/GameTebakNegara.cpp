@@ -29,34 +29,35 @@ vector<string> negara = {
     "San Marino", "Palau", "Nauru", "Tuvalu", "Holy See"
 };
 
-string HurufDisembunyikan(string negara){
+string HurufDisembunyikan(string negara){ // fungsi untuk sembunyikan huruf secara random
     vector<int> indeks;
-    for(int i = 0; i < negara.size(); i++){
-        if(negara[i] != ' ' && negara[i] != '-' && negara[i] != '\''){
+    for(int i = 0; i < negara.size(); i++){ // skip semua spasi dan tanda baca disemua index
+        if(negara[i] != ' ' && negara[i] != '-' && negara[i] != '\''){ 
             indeks.push_back(i);
         }
     }
 
+    // sembunyikan random huruf sebanyak 30-50%
     int persen = rand() % 21 + 30;
     int jlhSembunyi = indeks.size() * persen/100;
 
-    if(jlhSembunyi < 1){
+    if(jlhSembunyi < 1){ // kalok jumlah sembunyi huruf kurang dari 1(dari hasil perhitungan di atas), paksa sembunyikan 2 huruf
         jlhSembunyi = 2;
     }
 
-    for(int i = indeks.size() -1; i > 0; i--){
+    for(int i = indeks.size() -1; i > 0; i--){ // mengacak index yang akan disembunyikan
         int j = rand() % (i + 1);
         swap(indeks[i], indeks[j]);
     }
 
-    for(int i = 0; i < jlhSembunyi; i++){
+    for(int i = 0; i < jlhSembunyi; i++){ // sembunyikan huruf dengan '_'
         negara[indeks[i]] = '_';
     }
 
     return negara;
 }
 
-string ToLower(string huruf){
+string ToLower(string huruf){ // untuk ubah string ke lowercase
     transform(huruf.begin(), huruf.end(), huruf.begin(), ::tolower);
     return huruf;
 }
@@ -69,13 +70,16 @@ int main(){
 
     system("cls");
     do{
-        int indexNegara = rand() % negara.size();
+        int indexNegara = rand() % negara.size(); // pilih negara secara random
         string Tebaknegara = negara[indexNegara];
 
-        string soal = HurufDisembunyikan(Tebaknegara);
+        string soal = HurufDisembunyikan(Tebaknegara); // sembunyikan huruf secara random
         cout << "\nTebak Negara: " << soal;
         cout << "\nNegara apakah yang dimaksud? "; getline(cin, jawaban);
 
+        string jawabanLower = ToLower(jawaban);
+        string negaraLower = ToLower(Tebaknegara);
+        
         if(ToLower(jawaban) == ToLower(Tebaknegara)){
             skor++;
             cout << "Selamat! Anda benar.\n";
