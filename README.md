@@ -13,6 +13,6 @@ RAFLY SYAHPUTRA (AP4-251401122)                    = Project 5 : Game Tebak Nega
 
 **VIDEO PENJELASAN KELOMPOK = (Project 4 : Minesweeper++) && (Project 5 : Game Tebak Negara)**
 
-**LINK VIDEO PENJELASAN KELOMPOK = ...**
+**LINK VIDEO PENJELASAN KELOMPOK = https://youtu.be/PSaN3p8tR24?si=ag2ndRRqWWCuaZwD**
 
 **LINK GOOGLE DRIVE SCREENSHOT HASIL OUTPUT PROJECT = https://drive.google.com/drive/folders/1LOXGXEjuOA5yUxe0dkTPt7_MLYo78eXH**
